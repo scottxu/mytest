@@ -1,0 +1,27 @@
+<h1>Listing mycs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mya</th>
+      <th>Myb</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mycs.each do |myc| %>
+      <tr>
+        <td><%= myc.mya_id %></td>
+        <td><%= myc.myb_id %></td>
+        <td><%= link_to 'Show', myc %></td>
+        <td><%= link_to 'Edit', edit_myc_path(myc) %></td>
+        <td><%= link_to 'Destroy', myc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Myc', new_myc_path %>

@@ -1,0 +1,27 @@
+<h1>Listing mybs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mya</th>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mybs.each do |myb| %>
+      <tr>
+        <td><%= myb.mya_id %></td>
+        <td><%= myb.title %></td>
+        <td><%= link_to 'Show', myb %></td>
+        <td><%= link_to 'Edit', edit_myb_path(myb) %></td>
+        <td><%= link_to 'Destroy', myb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Myb', new_myb_path %>

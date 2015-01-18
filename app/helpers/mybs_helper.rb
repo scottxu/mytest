@@ -1,0 +1,2 @@
+module MybsHelper
+end

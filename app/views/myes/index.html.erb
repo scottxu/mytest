@@ -1,0 +1,29 @@
+<h1>Listing myes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mya</th>
+      <th>Myb</th>
+      <th>Myc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @myes.each do |mye| %>
+      <tr>
+        <td><%= mye.mya_id %></td>
+        <td><%= mye.myb_id %></td>
+        <td><%= mye.myc_id %></td>
+        <td><%= link_to 'Show', mye %></td>
+        <td><%= link_to 'Edit', edit_mye_path(mye) %></td>
+        <td><%= link_to 'Destroy', mye, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mye', new_mye_path %>
